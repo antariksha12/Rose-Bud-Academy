@@ -2,7 +2,8 @@ import { forwardRef } from 'react'
 
 const base =
   'inline-flex items-center justify-center font-heading font-medium tracking-tight ' +
-  'transition-colors duration-200 ease-soft rounded focus-visible:outline-none ' +
+  'transition-all duration-300 ease-out rounded focus-visible:outline-none ' +
+  'shadow-sm hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0 active:scale-[0.98] ' +
   'disabled:opacity-50 disabled:pointer-events-none'
 
 const variants = {
@@ -22,12 +23,21 @@ const sizes = {
 
 /**
  * Button
- * A single, consistent button primitive for the whole site. No gradients,
- * no glow — a solid fill or a hairline border, and a calm color shift on
- * hover. `as="a"` renders an anchor for links that look like buttons.
+ * A single, consistent button primitive for the whole site.
+ * Adds subtle lift, shadow, and press interactions for a more premium feel.
  */
 const Button = forwardRef(
-  ({ as: Component = 'button', variant = 'primary', size = 'md', className = '', children, ...props }, ref) => {
+  (
+    {
+      as: Component = 'button',
+      variant = 'primary',
+      size = 'md',
+      className = '',
+      children,
+      ...props
+    },
+    ref
+  ) => {
     return (
       <Component
         ref={ref}

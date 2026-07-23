@@ -61,7 +61,7 @@ function Navbar() {
             <li key={link.label}>
               <a
                 href={link.href}
-                className="font-body text-[15px] tracking-[0.01em] text-ink-soft hover:text-primary transition-colors duration-200 ease-soft"
+                className="relative inline-block py-1 font-body text-[15px] tracking-[0.01em] text-ink-soft transition-colors duration-300 ease-soft hover:text-primary after:absolute after:left-1/2 after:bottom-0 after:h-0.5 after:w-0 after:-translate-x-1/2 after:rounded-full after:bg-primary after:transition-all after:duration-300 after:ease-out hover:after:w-full"
               >
                 {link.label}
               </a>
