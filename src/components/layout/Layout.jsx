@@ -8,7 +8,9 @@ function Layout() {
       <Navbar />
 
       <main className="flex-1">
-        <Outlet />
+        <div className="page-transition">
+          <Outlet />
+        </div>
       </main>
 
       <Footer />
