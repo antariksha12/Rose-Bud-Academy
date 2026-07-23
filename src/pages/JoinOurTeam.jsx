@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Button from '../components/ui/Button.jsx'
 import ApplicationModal from '../components/ui/ApplicationModal.jsx'
+import SEO from '../components/SEO.jsx'
 
 function JoinOurTeam() {
   const [modalOpen, setModalOpen] = useState(false)
@@ -24,54 +25,75 @@ function JoinOurTeam() {
   ]
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-paper">
-      <div className="container-content">
-        <div className="max-w-3xl">
-          <p className="text-primary font-medium uppercase tracking-[0.08em] mb-3">
-            Join Our Team
-          </p>
+    <>
+      <SEO
+        title="Join Our Team | Rose Bud Academy Careers"
+        description="Explore career opportunities at Rose Bud Academy. Join our team of educators and staff members in creating a better learning environment for students in Boginadi, Lakhimpur, Assam."
+      />
 
-          <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-ink mb-6">
-            Join Our Team
-          </h1>
+      <section className="py-16 sm:py-20 lg:py-24 bg-paper">
+        <div className="container-content">
 
-          <p className="text-base sm:text-lg text-ink-soft leading-relaxed">
-            We welcome passionate educators and staff members who want to be
-            part of Rose Bud Academy and help shape the future of young
-            learners.
-          </p>
+          <div className="max-w-3xl">
+            <p className="text-primary font-medium uppercase tracking-[0.08em] mb-3">
+              Join Our Team
+            </p>
 
-          <Button size="lg" className="mt-8 w-full sm:w-auto" onClick={() => setModalOpen(true)}>
-            Apply Now
-          </Button>
-        </div>
+            <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-ink mb-6">
+              Join Our Team
+            </h1>
 
-        <div className="mt-10 sm:mt-14 grid gap-5 sm:gap-6 md:grid-cols-3">
-          {sections.map((section) => (
-            <div
-              key={section.title}
-              className="rounded-2xl border border-line bg-white p-6 sm:p-8 shadow-soft"
+            <p className="text-base sm:text-lg text-ink-soft leading-relaxed">
+              We welcome passionate educators and staff members who want to be
+              part of Rose Bud Academy and help shape the future of young
+              learners.
+            </p>
+
+            <Button
+              size="lg"
+              className="mt-8 w-full sm:w-auto"
+              onClick={() => setModalOpen(true)}
             >
-              <h2 className="font-heading text-2xl font-semibold text-ink mb-3">
-                {section.title}
-              </h2>
+              Apply Now
+            </Button>
+          </div>
 
-              <p className="text-ink-soft leading-relaxed">
-                {section.description}
-              </p>
-            </div>
-          ))}
+          <div className="mt-10 sm:mt-14 grid gap-5 sm:gap-6 md:grid-cols-3">
+            {sections.map((section) => (
+              <div
+                key={section.title}
+                className="rounded-2xl border border-line bg-white p-6 sm:p-8 shadow-soft"
+              >
+                <h2 className="font-heading text-2xl font-semibold text-ink mb-3">
+                  {section.title}
+                </h2>
+
+                <p className="text-ink-soft leading-relaxed">
+                  {section.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10 sm:mt-14 text-center">
+            <Button
+              size="lg"
+              className="w-full sm:w-auto"
+              onClick={() => setModalOpen(true)}
+            >
+              Apply Now
+            </Button>
+          </div>
+
         </div>
 
-        <div className="mt-10 sm:mt-14 text-center">
-          <Button size="lg" className="w-full sm:w-auto" onClick={() => setModalOpen(true)}>
-            Apply Now
-          </Button>
-        </div>
-      </div>
+        <ApplicationModal
+          open={modalOpen}
+          onClose={() => setModalOpen(false)}
+        />
 
-      <ApplicationModal open={modalOpen} onClose={() => setModalOpen(false)} />
-    </section>
+      </section>
+    </>
   )
 }
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
+
 import App from './App.jsx'
 import './index.css'
 import PageLoader from './components/ui/PageLoader.jsx'
@@ -12,7 +13,7 @@ function Root() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
-    }, 700)
+    }, 500)
 
     return () => clearTimeout(timer)
   }, [])
