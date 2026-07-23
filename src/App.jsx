@@ -6,6 +6,8 @@ import Academics from './pages/Academics.jsx'
 import StudentLife from './pages/StudentLife.jsx'
 import Contact from './pages/Contact.jsx'
 import JoinOurTeam from './pages/JoinOurTeam.jsx'
+import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
+import TermsAndConditions from './pages/TermsAndConditions.jsx'
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
       <Route path="/contact" element={<Contact />} />
       <Route path="/join-our-team" element={<JoinOurTeam />} />
         <Route path="/" element={<Home />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+<Route path="/terms-and-conditions" element={<TermsAndConditions />} />
       </Route>
     </Routes>
   )
