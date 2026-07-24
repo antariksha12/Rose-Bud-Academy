@@ -5,6 +5,7 @@ import celebrations from '../assets/student-life/celebrations.jpeg'
 import participation from '../assets/student-life/participation.jpeg'
 import educationalTrip from '../assets/student-life/rang-ghar.jpeg'
 import environment from '../assets/student-life/environment.jpeg'
+import sports from '../assets/student-life/KHEL.jpeg'
 import SEO from '../components/SEO.jsx'
 
 function StudentLife() {
@@ -21,6 +22,7 @@ function StudentLife() {
       title: "Sports & Games",
       description:
         "Sports activities and Sports Week encourage teamwork, discipline, fitness, and a healthy competitive spirit among students.",
+      image: sports,
     },
     {
       title: "School Celebrations",
